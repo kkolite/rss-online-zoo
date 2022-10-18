@@ -1,0 +1,43 @@
+@import 'mixins-and-variables';
+@import 'header';
+@import 'footer';
+@import 'landing-animals';
+@import 'landing-online-backstage';
+@import 'landing-peek-and-feed';
+@import 'landing-testimonials';
+@import 'donate';
+@import 'donate-line';
+
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+    @include intaractive();
+    &:hover{
+        color: #fe9013;
+    }
+}
+
+.text-link {
+    color:#000;
+    border-bottom: 2px solid orange;
+    @include intaractive();
+
+    &:hover{
+        color: #fe9013
+    }
+}
+
+li {
+    @include intaractive();
+    &:hover{
+        color: #fe9013;
+    }
+}
+
+.button-text {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+}

@@ -1,0 +1,363 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    height: 100%;
+    nav {
+        width: 473px;
+        margin-right: 437px;
+        margin-left: 63px;
+        ul {
+            padding-inline-start: 0px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+    }
+    @include container();
+    @include roboto_16();
+}
+
+.burger-icon {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+    @include flex-background();
+    z-index: 2;
+    h1{
+        display: none;
+    }
+}
+
+.logo {
+    width: 80px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    &:hover{
+        opacity: .7;
+    }
+}
+
+.logo-text {
+    font-style: normal;
+    font-size: 19px;
+    font-weight: 400px;
+    line-height: 120%;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+    left: 6px;
+    color: #fff;
+}
+
+.logo-bamboo {
+    position: relative;
+    right: 58px;
+    top: 8px;
+    transform: rotate(-1deg) ;
+}
+
+.menu {
+    display: none;
+}
+
+.menu-back {
+    display: none;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1000px) {
+    header{
+        position: relative;
+        z-index: 3;
+    }
+   
+    .header-container {
+    @include container_small();
+    nav {
+        width: 431px;
+        margin-left: 63px;
+        margin-right: 259px;
+    }
+   } 
+}
+
+@media screen and (max-width: 999px) and (min-width: 640px) {
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 18px;
+        height: 10px;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+        div {
+            width: 18px;
+            height: 2px;
+            border-radius: 1px;
+             transition: all 0.5s;
+            background: #FFFFFF;
+        }
+    }
+
+    .header-container {
+        nav {
+            display: none
+        }
+        @include container_tablet();
+    }
+    
+    header {
+        position: fixed;
+        height: 34px;
+        z-index: 4;
+    }
+    
+    .logo {
+        width: 47px;
+        height: 29px;
+        border: none;
+    }
+    
+    .logo-text {
+        font-size: 12px;
+        left: 6px; 
+    }
+    
+    .logo-bamboo {
+        right: 38px;
+        top: 3px; 
+    }
+
+    .designed-by {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        width: 640px;
+        height: 330px;
+        left: 50%;
+        margin-left: -320px;
+        background-color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .4s;
+        &-container {
+            width: 620px;
+            margin: 10px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+        z-index: 5;
+    }
+
+    .menu-back {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        background-color: rgba(0,0,0,.7);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .logo-burger {
+        border: 1px solid $orang;
+        p{
+            color: $orang;
+        }
+    }
+
+    .burger-exit {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-active {
+        visibility: visible;
+        opacity: 1;
+        transition: all .4s;
+    }
+
+    .body-hidden {
+        overflow: hidden;
+    }
+
+    .burger-nav {
+        padding-inline-start: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 170px;
+        li {
+            @include roboto_16();
+            color: #000000 !important;
+            a {
+                color: #000000 !important;
+            }
+        }
+    }
+
+    .burger-designed-by {
+        margin-top: 20px;
+        @include roboto_16();
+        a{
+            color: #000000 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 18px;
+        height: 10px;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+        div {
+            width: 18px;
+            height: 2px;
+            border-radius: 1px;
+             transition: all 0.5s;
+            background: #FFFFFF;
+        }
+    }
+
+    .header-container {
+        nav {
+            display: none
+        }
+        @include container_mobile;
+    }
+    
+    header {
+        height: 34px;
+        position: fixed;
+        z-index: 4;
+    }
+    
+    .logo {
+        width: 47px;
+        height: 29px;
+        border: none;
+    }
+    
+    .logo-text {
+        font-size: 12px;
+        left: 6px;
+    }
+    
+    .logo-bamboo {
+        right: 38px;
+        top: 3px; 
+    }
+
+    .designed-by {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        width: 320px;
+        height: 330px;
+        left: 50%;
+        margin-left: -160px;
+        background-color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .4s;
+        &-container {
+            width: 300px;
+            margin: 10px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+        z-index: 5;
+    }
+
+    .menu-back {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        background-color: rgba(0,0,0,.7);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .logo-burger {
+        border: 1px solid $orang;
+        p{
+            color: $orang;
+        }
+    }
+
+    .burger-exit {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-active {
+        visibility: visible;
+        opacity: 1;
+        transition: all .4s;
+    }
+
+    .body-hidden {
+        overflow: hidden;
+    }
+
+    .burger-nav {
+        padding-inline-start: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 170px;
+        li {
+            @include roboto_16();
+            color: #000000 !important;
+            a {
+                color: #000000 !important;
+            }
+        }
+    }
+
+    .burger-designed-by {
+        margin-top: 20px;
+        @include roboto_16();
+        a{
+            color: #000000 !important;
+        }
+    }
+}

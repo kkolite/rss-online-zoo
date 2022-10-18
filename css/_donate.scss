@@ -1,0 +1,418 @@
+.section-panda {
+    background: url(../assets/Giant_Panda.jpg)0 -199px/100% no-repeat;
+    background-size: cover;
+    height: 385.5px;
+}
+
+.background-donate {
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    opacity: 0.9;
+}
+
+.donate {
+    @include container();
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    h3{
+        @include roboto_h3();
+        font-weight: 400;
+        color: #fff;
+        margin: 40px 0px 0px 0px;
+    }
+    &-p{
+        @include roboto_16();
+        color: #fff;
+        line-height: 22.1px;
+        margin: 12px 10px 7px 0px;
+        span{
+            font-weight: 500;
+        }
+    }
+    button{
+       @include button_1();
+       justify-content: unset;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.panda-diet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 520px;
+    margin-top: 55px;
+    margin-bottom: 48px;
+    span{
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 57.6px;
+    }
+    &-text{
+        @include roboto_16();
+        text-align: center;
+        line-height: 30.4px;
+        position: relative;
+        top: 30px;
+        right: 12px;
+    }
+    &-x{
+        position: relative;
+        right: 32px;
+        top: 14px;
+    }
+}
+
+.donate-container {
+    margin-top: 64px;
+    margin-bottom: 180px;
+    width: 100%;
+    height: 964px;
+    background: rgba(255,255,255, 0.5);
+    border-radius: 20px;
+    @include flex-background();
+    justify-content: space-between;
+    &-description{
+        @include roboto_24();
+        width: 976px;
+        margin-top: 20px;
+    }
+    h2{
+        @include roboto_h2();
+        color: $orang;
+        margin: 42px 0 0 0;
+    }
+}
+
+.range-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 976px;
+    
+    label{
+        margin-bottom: 20px;
+        margin-left: 4px;
+    }
+}
+
+.dollar-logo {
+    position: absolute;
+    top: -60px;
+    left: 220px;
+}
+
+.input-amount {
+    margin-top: 100px;
+    width: 256px;
+    height: 52px;
+    @include roboto_16();
+    border: 1px solid #929699;
+    border-radius: 2px;
+    background-color: transparent;
+    padding-left: 10px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include roboto_16();
+    width: 201px;
+    margin-top: 23px;
+    position: relative;
+    right: 10px;
+    div {
+        display: flex;
+        align-items: center;
+        input{
+            appearance: none;
+            border: 1px solid #fe9013;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-right: 10px;
+            &:checked{
+                background-color: $orang;
+            }
+        }
+    }
+}
+
+.donate-share {
+    @include roboto_16();
+    margin-bottom: 62px;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1000px) {
+    .section-panda {
+        height: 390px;
+        background: url(../assets/panda_donate_small.jpg)0 -0px/100% no-repeat;
+    }
+
+    .donate {
+        @include container_small();
+        h3{
+            margin: 40px 188px 0px 0px;
+            line-height: 46.8px;
+        }
+        &-p{
+            margin: 30px 10px 0px 0px;
+        }
+        &-second-h3 {
+            margin-top: 45px !important;
+        }
+    }
+
+    /*.panda-diet {
+        width: 520px;
+        margin-top: 55px;
+        margin-bottom: 48px;
+        span{
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 57.6px;
+        }
+        &-text{
+            @include roboto_16();
+            text-align: center;
+            line-height: 30.4px;
+            position: relative;
+            top: 30px;
+            right: 12px;
+        }
+        &-x{
+            position: relative;
+            right: 32px;
+            top: 14px;
+        }
+    }*/
+    
+    .donate-container {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        height: 918px;
+        &-description{
+            width: 849px;
+            margin-top: 15px;
+        }
+        h2{
+            margin: 20px 0 0 0;
+        }
+    }
+    
+    .range-container {
+        width: 810px;
+        
+        label{
+            margin-bottom: 20px;
+            margin-left: 4px;
+        }
+    }
+    
+    .dollar-logo {
+        top: -60px;
+        left: 220px;
+    }
+    
+    .donate-share {
+        margin-bottom: 46px;
+    }
+}
+
+@media screen and (max-width: 999px) and (min-width: 640px) {
+    .section-panda {
+        background: url(../assets/panda_tablet.png)0 34px/100% no-repeat;
+        background-size: 100% auto;
+        height: 369px;
+    }
+       
+    .donate {
+        @include container_tablet();
+        h3{
+            @include roboto_24();
+            margin: 30px 0px 0px 0px;
+        }
+        &-p{
+            margin: 20px 0px 0px 0px;
+        }
+        &-second-h3 {
+            font-size: 36px !important;
+        }
+    }
+    
+    .panda-diet {
+        //width: 520px;
+        margin-top: 50px;
+        margin-bottom: 41px;
+       /* span{
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 57.6px;
+        }
+        &-text{
+            @include roboto_16();
+            text-align: center;
+            line-height: 30.4px;
+            position: relative;
+            top: 30px;
+            right: 12px;
+        }
+        &-x{
+            position: relative;
+            right: 32px;
+            top: 14px;
+        }*/
+    }
+    
+    .donate-container {
+        margin-top: 30px;
+        margin-bottom: 46px;
+        height: 918px;
+        &-description{
+            width: 600px;
+            text-align: center;
+        }
+        h2{
+            margin: 30px 0 0 0;
+        }
+    }
+    
+    .range-container {
+        width: 600px;
+        label{
+            margin-bottom: 13px;
+            margin-left: 4px;
+        }
+    }
+    
+    .dollar-logo {
+        top: -63px;//need to check
+        left: 185px;
+    }
+    
+    .input-amount {
+        margin-top: 100px;//need to check
+        width: 167px;
+        height: 42px;
+    }
+    
+    .radio-container {
+        margin-top: 31px;
+        right: 10px;//need to check
+    }
+    
+    .donate-share {
+        margin-bottom: 31px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .section-panda {
+        background: url(../assets/panda_conate_mobile.jpg)0 34px/100% no-repeat;
+        height: 221px;
+    }
+       
+    .donate {
+        @include container_mobile();
+        h3{
+            @include roboto_24();
+            margin: 30px 0px 0px 0px;
+        }
+        &-p{
+            margin: 20px 0px 0px 0px;
+        }
+        button {
+            margin-top: 27px;
+        }
+    }
+    
+    .panda-diet {
+        width: 300px;
+        margin-top: 5px;
+        margin-bottom: 8px; //need to check
+        span{
+            font-size: 42px;
+            font-weight: 500;
+            line-height: 28.5px;
+        }
+        &-text{
+            font-size: 9px;
+            text-align: center;
+            line-height: 18.6px;
+            position: relative;
+            top: 17px;
+            right: 0px; //need to check
+        }
+        &-x{
+            position: relative;
+            font-size: 8px;
+            right: 14px;
+            top: 5px;
+        }
+        img {
+            width: 160px;
+            height: 138px;
+        }
+    }
+    
+    .donate-container {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        height: 591px;
+        &-description{
+            margin-top: 10px;
+            width: 300px;
+            text-align: center;
+            @include roboto_16();
+            line-height: 22.1px;
+        }
+        h2{
+            margin: 20px 0 0 0;
+            @include roboto_24();
+        }
+    }
+    
+    .range-container {
+        width: 300px;        
+        label{
+            margin-bottom: -1px;
+            margin-left: 4px;
+        }
+        &-label {
+            position: relative;
+            top: -5px;
+        }
+    }
+    
+    .dollar-logo {
+        top: -55px;//need to check
+        left: 180px;
+    }
+    
+    .input-amount {
+        margin-top: 40px;//need to check
+        width: 170px;
+        height: 40px;
+        padding-left: 7px;
+    }
+    
+    .radio-container {
+        margin-top: 20px;
+        right: 14px;//need to check
+    }
+    
+    .donate-share {
+        margin-bottom: 20px;
+        width: 302px;
+    }
+}

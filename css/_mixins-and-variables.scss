@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("../assets/fonts/Roboto-Medium.ttf");
+    font-weight: 500;
+   }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../assets/fonts/Roboto-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url("../assets/fonts/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url("../assets/fonts/Roboto-Bold.ttf");
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Roboto';
+    margin: 0 auto;
+}
+
+$green: #4b9200;
+$orang: #fe9013;
+$yellow: #ffee2e;
+$orang_grad: #fed290;
+$pink_grad: #febdab;
+$red: #d31414;
+$black_blue: #333b41;
+$gray: #767474;
+$gray_smoky: #ababab;
+$light_gray: #f1f3f2;
+$white: #fdfdff;
+
+@mixin intaractive {
+    transition: all .3s;
+    cursor: pointer;
+}
+
+@mixin roboto_h1 {
+    font-style: bold;
+    font-size: 107px;
+}
+
+@mixin roboto_h2 {
+    font-style: normal;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+@mixin roboto_h3 {
+    font-style: normal;
+    font-size: 36px;
+}
+
+@mixin roboto_24 {
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+@mixin roboto_16 {
+    font-style: normal;
+    font-size: 16px;
+}
+
+@mixin roboto_button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+@mixin roboto_small {
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+@mixin container {
+    margin: 0 auto;
+    width: 1160px;
+}
+
+@mixin container_small {
+    margin: 0 auto;
+    width: 940px;
+}
+
+@mixin container_tablet {
+    margin: 0 auto;
+    width: 600px;
+}
+
+@mixin container_mobile {
+    margin: 0 auto;
+    width: 300px;
+}
+
+@mixin flex-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin button_1 {
+    width: 298px;
+    height: 52px;
+    color: #fff;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    @include roboto_button();
+    @include flex-background();
+    justify-content: center;
+    border-radius: 27px;
+    border: 1px solid $orang;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover{
+        background: linear-gradient(#e47209 1.49%, #e47209 101.44%);
+        border: 1px solid #e47209;
+    }
+    &:active{
+        background: linear-gradient($green 1.49%, $green 101.44%);
+        border: 1px solid $green;
+    }
+}
+
+@mixin button_2 {
+    width: 298px;
+    height: 54px;
+    color: #fff;
+    @include roboto_button();
+    @include flex-background();
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid $orang;
+    transition: background .3s;
+    cursor: pointer;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 5px;
+    &:hover{
+        background: linear-gradient(113.96deg, #e47209 1.49%, #e47209 101.44%);
+        border: 1px solid #e47209;
+    }    
+    &:active{
+        background: linear-gradient(113.96deg, $green 1.49%, $green 101.44%); 
+        border: 1px solid $green;
+    }
+}

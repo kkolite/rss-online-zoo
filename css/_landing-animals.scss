@@ -1,0 +1,447 @@
+.section-animal {
+    @include container();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 180px;
+    z-index: 2;
+    overflow: hidden;
+    button {
+        @include button_1();
+        margin: 80px auto 100px auto;
+    }
+    &-border {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.animal-container {
+    width: 1160px;
+    height: 872px;
+    display: none;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px 30px;
+    animation: 0.5s ease-in-out;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.animal-item {
+    border: 1px solid #fe9013;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 424px;
+    position: relative;
+    overflow: hidden;
+    div{
+        margin: 0px 13px 0px 16px;
+        width: 337px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        @include intaractive();
+        p{
+            @include roboto_small();
+            line-height: 18px;
+            margin-top: 8px;
+            margin-bottom: 14px;
+            span{
+                @include roboto_button();
+                font-weight: 500px;
+            }
+        }
+    }
+    img{
+        overflow: hidden;
+        @include intaractive();
+    }
+    @include intaractive();
+    &:hover{
+        img{
+            scale: 1.05;
+            filter: brightness(30%);
+        }
+        div{
+            transform: translateY(-360px) scaleX(1.07);
+            color: #fff;
+            z-index: 3;
+        }
+        overflow: hidden;
+    }
+}
+
+.background-flower1 {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+.background-flower2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.background-flower2-alt {
+    display: none;
+}
+
+.background-flower3 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+}
+
+.arrows-container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 1130px;
+    width: 1322px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    div{
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background-color: $orang;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include intaractive();
+        &:hover{
+            opacity: .8;
+        }
+        &:active{
+            background-color: $green;
+        }
+    }
+}
+
+.right-arrow {
+    transform: rotate(180deg);
+    margin-left: 1198px;
+}
+
+//slider
+
+.active,
+.next {
+  display: grid;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+  opacity: 0;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+  opacity: 0;
+
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1000px) {
+    .section-animal {
+        @include container_small();
+        margin-top: 143px;
+        button{
+            margin-bottom: 140px;
+        }
+        &-border {
+            width: 100%;
+        }
+    }
+
+    .animal-container {
+        width: 940px;
+        height: 800px;
+        gap: 92px 30px;
+    }
+
+    .animal-item {
+        height: 352px;
+        width: 291px;
+        div{
+            margin: 0px 13px 0px 16px;
+            width: 265px;
+            p{
+                margin-top: 8px;
+                margin-bottom: 14px;
+            }
+        }
+        &-img{
+            width: 294px;
+            height: 294px;
+        }
+        &:hover{
+            img{
+                scale: 1.05;
+                filter: brightness(30%);
+            }
+            div{
+                transform: translateY(-300px) scaleX(1.07);
+                color: #fff;
+                z-index: 3;
+            }
+            overflow: hidden;
+        }
+    }
+
+    .background-flower1 {
+        display: none;
+    }
+
+    .background-flower2 {
+        display: none;
+    }
+
+    .background-flower2-alt {
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 0;
+    }
+
+    .background-flower3 {
+        width: 240px;
+        height: 180px;
+    }
+
+    .arrows-container {
+        top: 1040px; 
+        width: 295px;
+        z-index: 4;
+    }
+
+    .right-arrow {
+        margin-left: 171px;
+    }
+}
+
+@media screen and (max-width: 999px) and (min-width: 640px) {
+    .section-animal {
+        @include container_tablet();
+        margin-top: 80px;
+        button{
+            margin-bottom: 100px;
+            margin-top: 60px;
+        }
+
+    }
+
+    .animal-container {
+        width: 600px;
+        height: 756px;
+        gap: 92px 30px;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .animal-item {
+        height: 330px;
+        width: 283px;
+        div{
+            margin: 0px 3px 0px 11px;
+            width: 269px;
+            height: 47px;
+            p{
+                margin-top: 8px;
+                margin-bottom: 14px;
+                font-size: 12px;
+                line-height: 120%;
+                span {
+                    font-size: 13px;
+                }
+            }
+            img{
+                scale: 0.8;
+            }
+
+        }
+        &-img{
+            width: 285px;
+            height: 285px;
+        }
+        &:hover{
+            div{
+                transform: translateY(-150px) scaleX(1.07);
+                color: #fff;
+                z-index: 3;
+            }
+            overflow: hidden;
+        }
+    }
+
+    .background-flower1 {
+        height: 476px;
+        margin-right: -25px;
+        top: 25px;
+    }
+
+    .background-flower2 {
+        display: none;
+    }
+
+    .background-flower2-alt {
+        height: 202px;
+        display: block;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        margin-left: -60px;
+    }
+
+    .background-flower3 {
+        width: 175px;
+        height: 131px;
+    }
+
+    .arrows-container {
+        top: 885px; 
+        width: 154px;
+        z-index: 4;
+    }
+
+    .right-arrow {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .section-animal {
+        @include container_mobile();
+        margin-top: 40px;
+        button{
+            margin-bottom: 60px;
+            margin-top: 20px;
+        }
+        &-border {
+            height: 1390px;
+            overflow: hidden;
+        }
+
+    }
+
+    .animal-container {
+        width: 286px;
+        height: 2797px;
+        grid-template-columns: 286px;
+        grid-template-rows: repeat(8, auto);
+        gap: 20px;
+        
+    }
+
+    .animal-item {
+        height: 330px;
+        width: 283px;
+        div{
+            height: 47px;
+            margin: 0px 14px 0px 12px;
+            width: 267px;
+            align-items: center;
+            p{
+                margin-top: 8px;
+                margin-bottom: 14px;
+                font-size: 12px;
+                line-height: 120%;
+                span {
+                    font-size: 13px;
+                }
+            }
+            img {
+                scale: 0.8;
+            }
+        }
+        &-img{
+            width: 285px;
+            height: 285px;
+        }
+        &:hover{
+            div{
+                transform: translateY(-150px) scaleX(1.07);
+                color: #fff;
+                z-index: 3;
+            }
+            overflow: hidden;
+        }
+    }
+    
+    .background-flower1 {
+        height: 217px;
+        margin-right: -40px;
+        top: 80px;
+    }
+
+    .background-flower2 {
+        display: none;
+    }
+
+    .background-flower2-alt {
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 72px;
+        margin-left: -10px;
+    }
+
+    .background-flower3 {
+        width: 85px;
+        height: 71px;
+        margin-right: -15px;
+        margin-bottom: -1px;
+    }
+
+    .arrows-container {
+        display: none;
+    }
+}

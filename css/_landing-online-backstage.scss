@@ -1,0 +1,246 @@
+main {
+    width: 100%;
+}
+
+.background-panda {
+    background: url(../assets/Giant_Panda.jpg)0 -80px/100% no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-online {
+    @include  container();
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    div {
+        margin-top: 12px;
+        width: 465px;
+        height: 465px;
+        border-radius: 50%;
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        position: relative;
+        right: 107px;
+        p {
+            @include roboto_h1();
+            width: 500px;
+            height: 400px;
+            color: #fff;
+            text-align: center;
+            line-height: 75%;
+            position: relative;
+            left: 72.5px;
+            bottom: 35px;
+        }
+    }
+    button {
+        @include button_1();
+        position: relative;
+        right: 100px;
+        margin-top: 69px;
+        margin-bottom: 100px;
+    }
+}
+
+.yellow-text {
+    color: $yellow
+}
+
+.background-white {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-backstage {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+    margin-top: 140px;
+    position: relative;
+    z-index: 2;
+    &-text-box {
+        height: 403px;
+        width: 465px;
+        h2{
+            @include roboto_h2();
+            width: 465px;
+            margin-top: 0;
+            margin-bottom: 21px;
+        }
+        h3{
+            @include roboto_24();
+            margin-top: 56px;
+            margin-bottom: 35px;
+        }
+        p{
+            @include roboto_16();
+            width: 465px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1000px) {
+    .background-panda {
+        background: url(../assets/Giant_Panda_small.jpg)0 -80px/100% no-repeat;
+        width: 100%;
+        height: 504px;
+    }
+    .section-online {
+        @include container_small();
+        div{
+            margin-top: -11px;
+            width: 367px;
+            height: 367px;
+            right: 147px;
+            p{
+                font-weight: 700;
+                font-size: 85px;
+                line-height: 75%;
+                left: 8px;
+                bottom: 30px;
+            }
+        }
+        button {
+            margin-top: 45px;
+            right: 107px;
+        }
+    }
+    .section-backstage {
+        @include container_small();
+        margin-top: 100px;
+        &-text-box {
+            width: 454px;
+            height: 427px;
+        }
+        &-img-box {
+            width: 455px;
+            height: 408px;
+            position: relative;
+            top: 10px;
+            overflow: hidden;
+            img{
+                position: absolute;
+                left: -60px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 999px) and (min-width: 640px){
+    .background-panda {
+        background: url(../assets/Giant_Panda_tablet.jpg)0 -34px/100% no-repeat;
+        background-size: 100% auto;
+        position: relative;
+        z-index: 2;
+        top: 34px;
+    }
+    
+    .section-online {
+        @include  container_tablet();
+        div {
+            margin-top: 10px;
+            width: 238px;
+            height: 238px;
+            right: 50px;//need to check
+            p {
+                font-size: 54.2894px;
+                width: 256px;
+                height: 204px;
+                left: 37px;//need to check
+                bottom: 17px;//need to ckeck
+            }
+        }
+        button {
+            position: relative;
+            right: 300px;//need to check
+            margin-top: 0px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .section-backstage {
+        @include container_tablet();
+        margin-top: 93px;
+        &-text-box {
+            height: 367px;
+            width: 495px;
+            h2{
+                width: 495px;
+            }
+            h3{
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+            p{
+                @include roboto_16();
+                width: 495px;
+            }
+        }
+        &-img-box {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .background-panda {
+        background: url(../assets/Giant_Panda_mobile.jpg)0 0px/100% no-repeat;
+        height: 187px;
+        position: relative;
+        top: 34px;
+        z-index: 2;
+    }
+    
+    .section-online {
+        @include  container_mobile();
+        div {
+            margin-top: 22px;
+            width: 119px;
+            height: 119px;
+            right: 30px;//need to check
+            p {
+                font-size: 27.2px;
+                width: 128px;
+                height: 103px;
+                left: 17px;//need to check
+                bottom: 8px;//need to ckeck
+            }
+        }
+        button {
+            position: relative;
+            right: 0px;//need to check
+            margin-top: 65px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .section-backstage {
+        @include container_mobile();
+        margin-top: 140px;
+        &-text-box {
+            height: 388px;
+            width: 300px;
+            h2{
+                width: 300px;
+                margin-bottom: 10px;
+                font-size: 24px;
+                font-weight: 400;
+            }
+            h3{
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            p{
+                @include roboto_16();
+                width: 300px;
+                margin-top: 0px;
+            }
+        }
+        &-img-box {
+            display: none;
+        }
+    }
+}
